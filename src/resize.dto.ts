@@ -7,7 +7,6 @@ import {
   IsNumber,
   IsOptional,
   IsString,
-  IsUrl,
   Max,
   Min,
 } from 'class-validator'
@@ -69,6 +68,5 @@ export class ResizeDto {
   @IsOptional()
   public gravity?: keyof GravityEnum
 
-  @IsUrl({ require_host: false, require_tld: false })
   public url?: string
 }
